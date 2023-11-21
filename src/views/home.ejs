@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/output.css">
+    <title>Site INICIAL</title>
+</head>
+<body>
+    <div class="w-screen h-screen">
+        <header class="w-full flex justify-around items-center bg-black text-white py-3">
+            <div>
+                <h1>meusite</h1>
+            </div>
+            <div>
+                <nav>
+                    <% if(user) { %>
+                        <div class="flex gap-3">
+                            <p><%= user %></p>
+                            <a href="/logout">
+                                <p>Logout</p>
+                            </a>
+                        </div>
+                    <% } else {%>
+                        <a href="/login">
+                            <p onclick="clearCookies()">Logar</p>
+                        </a>
+                    <% } %>
+
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+</html>
